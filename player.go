@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-type User struct {
+type Player struct {
 	Name string
 	Age string
 	Wallet WalletDto
@@ -14,11 +14,11 @@ type WalletDto struct {
 	Amount float64
 }
 
-func (u *User) InitNewUser() {
+func (u *Player) InitNewPlayer() {
 
 }
 
-func (u *User) Bet (amount float64) error {
+func (u *Player) Bet (amount float64) error {
 	walletData := (*u).Wallet
 
 	if walletData.Amount - amount < 0 {
